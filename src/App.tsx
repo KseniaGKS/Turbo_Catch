@@ -4,10 +4,10 @@ const BUILD_PATH = `${import.meta.env.BASE_URL}unity`;
 
 function App() {
   const { unityProvider } = useUnityContext({
-    loaderUrl: `unity/docs.loader.js`,
-    dataUrl: `unity/docs.data`,
-    frameworkUrl: `unity/docs.framework.js`,
-    codeUrl: `unity/docs.wasm`,
+    loaderUrl: `./unity/docs.loader.js`,
+    dataUrl: `./unity/docs.data`,
+    frameworkUrl: `./unity/docs.framework.js`,
+    codeUrl: `./unity/docs.wasm`,
   });
 
   return (
