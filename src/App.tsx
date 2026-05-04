@@ -13,8 +13,11 @@ function App() {
     height: "100vh",
     width: "412px", 
     maxWidth: "100vw", 
+    margin: "0 auto",
     position: "relative",
-    display: "flex"
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
     }}>
     <Unity
     unityProvider={unityProvider}
