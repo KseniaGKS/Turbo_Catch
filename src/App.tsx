@@ -9,32 +9,16 @@ function App() {
   });
 
   return (
-    <div style={{ 
-      width: "100vw", 
-      height: "100vh", 
-      display: "flex", 
-      justifyContent: "center", 
-      alignItems: "center",
-      backgroundColor: "#242424" // Цвет фона как в Unity, чтобы не было белых вспышек
-    }}>
-      <div style={{ 
-        width: "100%", 
-        height: "100%", 
-        maxWidth: "412px", 
-        maxHeight: "100vh",
-        position: "relative"
-      }}>
-        <Unity
-          unityProvider={unityProvider}
-          style={{ 
-            width: "100%", 
-            height: "100%",
-            display: "block" // Важно для корректного рендеринга canvas
-          }}
-        />
-      </div>
+  <div className="wrapper">
+    <div className="game-container">
+      <Unity
+        unityProvider={unityProvider}
+        style={{ width: "100%", height: "100%" }}
+        devicePixelRatio={window.devicePixelRatio}
+      />
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
