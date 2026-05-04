@@ -9,20 +9,27 @@ function App() {
   });
 
   return (
+    // Внешний контейнер на весь экран
     <div style={{ 
-    height: "100vh",
-    width: "412px", 
-    maxWidth: "100vw", 
-    margin: "0 auto",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+      width: "100vw", 
+      height: "100vh", 
+      display: "flex", 
+      justifyContent: "center", 
+      alignItems: "center", 
+      backgroundColor: "#222" // Добавил цвет, чтобы вы видели границы
     }}>
-    <Unity
-    unityProvider={unityProvider}
-    style={{ width: "100%", height: "100%" }}
-    />
+      {/* Внутренний контейнер игры */}
+      <div style={{ 
+        height: "100vh",
+        width: "412px", 
+        maxWidth: "100vw", 
+        position: "relative"
+      }}>
+        <Unity
+          unityProvider={unityProvider}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </div>
     </div>
   );
 }
