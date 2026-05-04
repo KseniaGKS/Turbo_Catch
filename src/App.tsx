@@ -11,7 +11,6 @@ function App() {
   });
 
   return (
-    /* Контейнер, который центрирует игру и создает черный фон вокруг */
     <div style={{ 
       width: "100vw", 
       height: "100vh", 
@@ -24,11 +23,10 @@ function App() {
       <Unity
         unityProvider={unityProvider}
         style={{ 
-          // Укажите пропорции как в симуляторе (например, 9/16 для телефона или 16/9 для монитора)
           aspectRatio: "9 / 16", 
           height: "100%", 
-          width: "auto",
-          boxShadow: "0 0 20px rgba(0,0,0,0.5)" // Немного тени для красоты
+          width: "100%",
+          boxShadow: "0 0 20px rgba(0,0,0,0.5)"
         }}
       />
     </div>
