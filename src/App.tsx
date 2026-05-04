@@ -9,16 +9,15 @@ function App() {
   });
 
   return (
-  <div className="wrapper">
-    <div className="game-container">
-      <Unity
-        unityProvider={unityProvider}
-        style={{ width: "100%", height: "100%" }}
-        devicePixelRatio={window.devicePixelRatio}
-      />
+    <div className="wrapper">
+      <div className="game-container">
+        <Unity
+          unityProvider={unityProvider}
+          style={{ width: "100%", height: "100%" }}
+          devicePixelRatio={window.devicePixelRatio}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
 }
-
 export default App;
