@@ -11,26 +11,31 @@ function App() {
   });
 
   return (
+  <div style={{ 
+    width: "100vw", 
+    height: "100vh", 
+    display: "flex", 
+    justifyContent: "center", 
+    alignItems: "center", 
+    backgroundColor: "#1a1a1a",
+  }}>
     <div style={{ 
-      width: "100vw", 
-      height: "100vh", 
-      display: "flex", 
-      justifyContent: "center", 
-      alignItems: "center", 
-      backgroundColor: "#1a1a1a",
-      overflow: "hidden"
+      // Соотношение сторон задаем внешнему блоку
+      aspectRatio: "9 / 16", 
+      height: "100%", 
+      maxHeight: "100vh",
+      maxWidth: "100vw",
+      display: "flex" 
     }}>
       <Unity
         unityProvider={unityProvider}
         style={{ 
-          aspectRatio: "9 / 16", 
-          height: "100%", 
-          width: "100%",
-          boxShadow: "0 0 20px rgba(0,0,0,0.5)"
+          width: "100%", 
+          height: "100%",
+          boxShadow: "0 0 20px rgba(0,0,0,0.5)" 
         }}
       />
     </div>
-  );
-}
-
+  </div>
+);
 export default App;
