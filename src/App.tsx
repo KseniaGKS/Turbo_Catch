@@ -1,7 +1,5 @@
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-const BUILD_PATH = `${import.meta.env.BASE_URL}unity`;
-
 function App() {
   const { unityProvider } = useUnityContext({
     loaderUrl: `./unity/docs.loader.js`,
@@ -38,4 +36,5 @@ function App() {
     </div>
   </div>
 );
+}
 export default App;
