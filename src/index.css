@@ -2,11 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  /* Используем и высоту, и min-высоту, чтобы забить пространство */
   height: 100%;
   overflow: hidden;
   background-color: #1C0A3C;
-  /* Запрещаем зум пальцами, который часто ломает верстку в ВК */
   touch-action: none; 
 }
 
@@ -16,7 +14,6 @@ html, body {
 }
 
 .wrapper {
-  /* position: fixed — это ключ к успеху на мобилках */
   position: fixed;
   top: 0;
   left: 0;
@@ -28,13 +25,9 @@ html, body {
   background-color: #1C0A3C;
 }
 
-.game-container {
+ .game-container {
   width: 100%;
   height: 100%;
-  /* Если на телефоне игра должна быть на весь экран, 
-     а на ПК узкой — оставляем maxWidth */
-  max-width: 412px;
-  background-color: #000; /* Чтобы видеть границы канваса */
 }
 
 canvas {
