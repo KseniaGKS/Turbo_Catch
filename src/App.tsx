@@ -14,7 +14,8 @@ function App() {
         <Unity
           unityProvider={unityProvider}
           style={{ width: "100%", height: "100%" }}
-          devicePixelRatio={window.devicePixelRatio}
+          devicePixelRatio={Math.min(window.devicePixelRatio, 2)}
+          matchWebGLToCanvasSize={true}
         />
       </div>
     </div>
