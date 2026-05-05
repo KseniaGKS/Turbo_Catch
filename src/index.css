@@ -1,31 +1,23 @@
-html, body {
+html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: #1C0A3C;
-  touch-action: none; 
+  background: #1C0A3C;
 }
 
-#root {
+/* Центрирует всё содержимое по вертикали и горизонтали */
+.wrapper {
   width: 100%;
   height: 100%;
-}
-
-.wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1C0A3C;
+  justify-content: center; /* Центр по горизонтали */
+  align-items: center;     /* Центр по вертикали */
 }
 
- .game-container {
+/* На мобилках занимает всё место */
+.game-container {
   width: 100%;
   height: 100%;
 }
@@ -34,4 +26,16 @@ canvas {
   display: block;
   width: 100% !important;
   height: 100% !important;
+}
+
+/* Настройку для компьютеров выносим отдельно */
+@media (min-width: 800px) {
+  .game-container {
+    max-width: 500px;    /* Ограничение ширины */
+    max-height: 90vh;   /* Ограничение высоты, чтобы не упиралось в края */
+    aspect-ratio: 9 / 16;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Добавим тень для красоты на ПК */
+  }
 }
